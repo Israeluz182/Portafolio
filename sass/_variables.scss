@@ -1,0 +1,36 @@
+$color-fondo: #171f44;
+$color-aqua: #66c7f4;
+$color-texto: #ffffff;
+$color-gris: #c1cad6;
+$color-footer: #FF5D73;
+
+$color-player-backgound: #e0e5ec;
+$color-player-gris: #797d7f;
+
+$big-font-size: 2.7rem;
+$big-font-medium: 1.7rem;
+
+@mixin divider ($width) {
+  height: 4px;
+  width: $width;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,76,139,1) 0%, rgba(53,163,185,1) 100%); 
+  margin-top: 4px;
+  margin-bottom: 2.5em;
+}
+
+@mixin btn {
+  padding: 10px 20px;
+  font-family: "Fjalla One", sans-serif;
+  color: $color-texto;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #171f44;
+  box-shadow: -5px -5px 10px #090c1b, 
+               5px 5px 10px #25326d;
+  margin-top: 30px;
+  &:hover {
+    box-shadow: 1px 1px 10px -1px $color-aqua;
+  }
+}

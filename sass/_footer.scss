@@ -1,0 +1,273 @@
+footer {
+  background-color: $color-fondo;
+  color: $color-texto;
+  width: 100%;
+  .section-footer {
+    padding: 50px 30px 30px 30px;
+
+    .divider__footer {
+      border-top: 1px solid $color-gris;
+    }
+
+    h3 {
+      font-size: 1em;
+    }
+  }
+}
+
+.container__footer {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+
+  
+
+    .contact_card {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1rem;
+      border-radius: .75rem;
+      text-align: center;
+      .icon{
+        font-size: 2em;
+        color: $color-texto;
+      }
+    
+      
+      h2 {
+        font-size: 1.2em;
+      }
+      h3{
+        font-size: .9em;
+      }
+  
+      a{
+        text-decoration: none;
+        color: $color-texto;
+      .arrow__right{
+        font-size: 1em;
+        }
+        &:hover .arrow__right{
+          transform: translateX(.23rem);
+          transition: .4s;
+        }
+      }
+  
+    }
+   
+ 
+
+  .card__container {
+    grid-column: 1/8;
+
+    h2 {
+      font-size: 1em;
+
+      span {
+        color: $color-aqua;
+      }
+    }
+    h3 {
+      font-size: 0.8em;
+    }
+  }
+
+  .card__link {
+    grid-column: 8/11;
+    align-self: end;
+    display: flex;
+    justify-content: space-around;
+
+    
+      i {
+        color: $color-texto;
+        font-size: 1.3em;
+      }
+
+  }
+}
+
+
+.player__container{
+  grid-column: 8/11;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  width: 190px;
+  
+}
+.player {
+  width: auto;
+  height: 50px;
+  display: flex;
+  background-color: $color-player-backgound;
+  border-radius: 12px;
+  box-shadow: 5px 6px 10px rgba(163, 177, 198, 0.6),
+    -5px -6px 10px rgba(255, 255, 255, 0.5);
+  
+  .player__controls {
+    grid-column: 2/4;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+
+    .player__title {
+      font-weight: 600;
+      font-size: 0.6em;
+      color: $color-player-gris;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 1px auto;
+    }
+
+    .player__song {
+      color: #000000;
+      margin: auto;
+    }
+
+    .player__artist {
+      color: #000000;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8em;
+      font-weight: 400;
+      opacity: 0.5;
+      margin: auto;
+    }
+  }
+
+  .player__audio {
+    display: none;
+    visibility: hidden;
+  }
+
+  .player__boton {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .player__btn {
+      cursor: pointer;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: -6px -3px 8px 0px #fff9, -6px -6px 6px 0px #fff9,
+        8px 8px 20px #0001, 5px 5px 6px 0px #0001;
+      color: $color-player-gris;
+    }
+
+    .player__btn:active {
+      box-shadow: inset -8px -8px 20px #fff9, inset -5px -5px 6px #fff9,
+        inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
+    }
+
+    .player__btn--medium {
+      min-height: 40px;
+      min-width: 40px;
+
+      .hide {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .container__footer {
+    .card__call {
+      h2,
+      h3 {
+        font-size: 0.8em;
+      }
+    }
+
+    .card__container {
+      h2,
+      h3 {
+        font-size: 0.8em;
+      }
+    }
+
+    .card__email {
+      h2,
+      h3 {
+        font-size: 0.8em;
+      }
+    }
+    .card__link {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .container__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .card__call {
+      width: 50%;
+      h2,
+      h3 {
+        font-size: 0.8em;
+      }
+    }
+
+    .card__container {
+      order: 1;
+      h2,
+      h3 {
+        font-size: 0.8em;
+      }
+    }
+
+    .card__email {
+      h2,
+      h3 {
+        font-size: 0.8em;
+      }
+    }
+    .card__link {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+
+  .player__container{
+    bottom: 5.5rem;
+    right: -9rem;
+  .player {
+    height: 40px;
+    width: 40px;
+    .player__boton{
+      width: 100%;
+
+      .player__btn--medium{
+        min-width: 25px;
+        min-height: 25px;
+
+        i{
+          font-size: 10px;
+        }
+      }
+  
+    }
+    .player__controls{
+      display: none;
+    }
+  }
+
+    
+ }
+}

@@ -1,0 +1,153 @@
+.portafolio {
+  color: $color-texto;
+  width: 100%;
+  height: auto;
+
+  .portafolio__info {
+    padding: 5em;
+    .divider {
+      @include divider(150px);
+    }
+    h2 {
+      font-size: $big-font-size;
+    }
+  }
+
+  .container {
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+
+    .card {
+      width: 375px;
+      padding-bottom: 25px;
+      border-radius: 15px;
+      background: linear-gradient(315deg, #151c3d, #192149);
+      box-shadow: -33px -33px 66px #0d1126, 33px 33px 66px #212d62;
+    
+      .img__card {
+        width: 100%;
+        height: 200px;
+        background-image: url(../assets/images/web_italiano.png);
+        background-size: cover;
+      }
+    
+      .img__card1 {
+        background-image: url(../assets/images/uzuradi.png);
+      }
+    
+      .img__card2 {
+        background-image: url(../assets/images/smartfit.png);
+      }
+    
+      .img__card3 {
+        background-image: url(../assets/images/Portafolio.png);
+      }
+    
+      .img__card4 {
+        background-image: url(../assets/images/Reproductor.png);
+      }
+
+      .img__card5 {
+        background-image: url(../assets/images/consulting.png);
+      }
+    
+      .title__container {
+        margin: 20px 0;
+        padding: 0 15px 0 15px;
+        text-align: center;
+    
+        h2 {
+          font-size: $big-font-medium;
+          margin-bottom: 20px;
+          padding-bottom: 20px;
+          border-bottom: 2px solid $color-footer;
+        }
+      }
+    
+      h3 {
+        margin: 30px 0 0 0;
+        text-align: center;
+      }
+    
+      .project-links {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-bottom: 25px;
+    
+        i {
+          margin: 25px 25px;
+          font-size: 2.3em;
+          color: $color-footer;
+        }
+      }
+    
+      .project-details-content {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+    }
+  }
+}
+
+
+
+
+
+.tecno {
+  padding: 5em;
+
+  h2 {
+    font-size: $big-font-size;
+    margin-bottom: 25px;
+  }
+
+  .tecno__i {
+    display: flex;
+    justify-content: space-evenly;
+    i {
+      margin-top: 35px;
+      font-size: 3em;
+      color: $color-footer;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .portafolio {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .portafolio {
+    margin-top: 4em;
+    .container {
+      width: auto;
+      .card {
+        width: 300px;
+        .project-links {
+          i {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
+
+  .tecno {
+    .tecno__i {
+      i {
+        font-size: 2em;
+      }
+    }
+  }
+}
